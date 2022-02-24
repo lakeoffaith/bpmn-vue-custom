@@ -37,7 +37,7 @@ export default {
       // 建模
       this.bpmnModeler = new BpmnModeler({
         container: canvas,
-        keyboard: {bindTo: document.getElementById('canvas')},
+        keyboard: {bindTo: document},
         //添加控制板
         propertiesPanel: {
           parent: '#js-properties-panel'
