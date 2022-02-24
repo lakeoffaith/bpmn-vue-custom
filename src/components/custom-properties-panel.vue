@@ -37,6 +37,7 @@ export default {
       // 建模
       this.bpmnModeler = new BpmnModeler({
         container: canvas,
+        keyboard: {bindTo: document.getElementById('canvas')},
         //添加控制板
         propertiesPanel: {
           parent: '#js-properties-panel'
@@ -46,6 +47,7 @@ export default {
           magic: magicModdleDescriptor
         }
       })
+      // this.bpmnModeler.get('keyboard').bind(document);
       this.createNewDiagram()
     },
     createNewDiagram() {
@@ -132,8 +134,13 @@ export default {
   computed: {}
 }
 </script>
-
+<style >
+.bpmn-icon-intermediate-event-none{
+  display: none;
+}
+</style>
 <style scoped>
+
 .containers {
   background-color: #ffffff;
   width: 100%;
